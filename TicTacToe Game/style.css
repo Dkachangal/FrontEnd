@@ -33,6 +33,9 @@
 .smallBox {
     border: 2px solid black;
     background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -74,4 +77,10 @@
     background: #ff0000;
     height: 3.5rem;
     color: white;
+}
+#circle {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1rem solid black;
 }
