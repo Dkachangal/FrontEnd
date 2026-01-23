@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff0000;
+    height: 4rem;
+    color: white;
+}
+
+.playArea {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 38rem;
+    background: #00ff15;
+}
+.masterBox {
+    margin-top: 3rem;
+    width: 27rem;
+    height: 27rem;
+    background: #ffffff;
+    display: grid;
+    border: 2px solid black;
+
+}
+
+.scoreBoard {
+    width: 50rem;
+    height: 10rem;
+    background: #e1ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    
+}
+.playerScore {
+    
+}
+.computerScore {
+
+}
+
+.foot {
+    background: #ff0000;
+    height: 3.5rem;
+}
