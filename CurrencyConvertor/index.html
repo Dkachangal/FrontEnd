@@ -5,32 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="crossorigin="anonymous"referrerpolicy="no-referrer"/>
     <title>Currency Converter</title>
 </head>
 
 <body>
 
     <div class="master">
-        <div class="head">
-            <h1>Currency Converter</h1>
-        </div>
-        <div class="exchanger">
-            <form>
-                <div class="from">
-                    
-                    <div class="selectContainer">
-                        <img src="https://flagsapi.com/US/flat/64.png">
-                        <input type="text" placeholder="Enter Amount">
-                    </div>
-                    <div class="icon"></div>
-                    <div class="to"></div>
-                    <button id="convert"></button>
+        <form>
+            <div class="all">
+                <div class="enterAmount">
+                    <input type="text" placeholder="Enter Amount">
                 </div>
-            </form>
-
-        </div>
+                <div class="conversionPane">
+                    <div class="from">
+                        <img src="https://flagsapi.com/US/flat/64.png">
+                        <select>
+                            <option>USD</option>
+                            <option>INR</option>
+                            <option>EUR</option>
+                            <option>AUD</option>
+                        </select>
+                    </div>
+                    <!-- ADD ICON -->
+                      <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    <div class="to">
+                        <img src="https://flagsapi.com/IN/flat/64.png">
+                        <select>
+                            <option>INR</option>
+                            <option>USD</option>
+                            <option>EUR</option>
+                            <option>AUD</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="convertedAmount">
+                    <p id="outputAmount">100</p>
+                </div>
+                <div class="exchangeButton">
+                    <button id="convert">Exchange</button>
+                </div>
+            </div>
+        </form>
     </div>
-
 
     <script src="app.js"></script>
 </body>

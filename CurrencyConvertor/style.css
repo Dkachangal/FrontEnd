@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #EFECE3;
+}
+.master {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45rem;
+    /* background: #000; */
+    
+
+}
+.all {
+    padding: 2rem;
+    border-radius: 2rem;
+    width: 18rem;
+    height: 22rem;
+    /* background: #ff0000; */
+    background: #4A70A9;
+    /* border: 2px solid black; */
+}
+.conversionPane {
+    background: #8FABD4;
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    /* background: #000; */
+}
+form input {
+    background: #8FABD4;
+    color: #353430;
+    width: 100%;
+    height: 3rem;
+    font-size: 1.2rem;
+    border-radius: 0.7rem;
+    /* height: 2rem; */
+    border: none;
+}
+#outputAmount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EFECE3;
+    margin-top: 3rem;
+    width: 100%;
+    height: 3rem;
+    border-radius: 1.2rem;
+    background-color: #8FABD4;
+    font-size: 1.3rem;
+    text-align: center;
+}
+.exchangeButton {
+    /* background: #000; */
+    width: 100%;
+    height: 3rem;
+    border-radius: 1.2rem;
+    border: none;
+}
+#convert {
+    margin-top: 1.2rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.2rem;
+    background: #8FABD4;
+    color: #EFECE3;
+    border: none;
+}
+
