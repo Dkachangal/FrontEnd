@@ -4,18 +4,28 @@ let dropDown = document.querySelectorAll(".countries select");
 const URL ="https://api.exchangerate-api.com/v4/latest";
 const fromCurr = document.querySelector("#fromBox select");
 const toCurr = document.querySelector("#toBox select");
-
+// console.log(fromCurr.selectedOptions);
 
 
 async function changeCurrency(amount) {
     for (let x of dropDown2) {
-        console.log(x.value);
+        
+        console.log(x);
+
         x.addEventListener("change", (evt)=> {
             console.log(evt.target);
         })
         console.log("hi");
     }
 }
+ for (let a of dropDown) {
+        console.log(a);
+        a.addEventListener("change", (change)=> {
+            let curr = dropDown.selectedOptions;
+            console.log(curr);
+        })
+        console.log("hi");
+    }
 changeCurrency(2);
 // console.log(fromCurr.value);
 
