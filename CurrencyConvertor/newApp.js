@@ -78,7 +78,5 @@ button.addEventListener("click", async (event) => {
 
     console.log(amountOutput);
     let outputDisplay = document.querySelector("#outputAmount");
-    outputDisplay.innerText = amountOutput + " "+ toCurrency;
-
-
+    outputDisplay.innerText = `${amount} ${fromCurrency} = ${amountOutput} ${toCurrency}`;
 });
