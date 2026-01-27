@@ -50,19 +50,22 @@ function getFromCurrency() {
 }
 getFromCurrency();
 
-button.addEventListener("click", (event) => {
+button.addEventListener("click", async (event) => {
     event.preventDefault();
     console.log(event);
 
     // getting the amount
     let amount = document.querySelector("input");
-    
     if (amount.value === "" || amount.value < 1) amount.value = 1;
 
     //getting currency exchange rate
     let URL = `${baseUrl}/${fromCurrency}`;
-    console.log(URL);
+    let promise = await fetch(URL);
+    let data = await promise.json();
+    console.log(data.rates["AED"]);
     
+    console.log(URL);
+
 
 
 });
