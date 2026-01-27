@@ -2,7 +2,9 @@ let dropDown = document.querySelectorAll(".countries select");
 let button = document.querySelector("button");
 const baseUrl = "https://api.exchangerate-api.com/v4/latest";
 let fromCurrency = "USD";
+let toCurrency = "INR";
 let fromBox = document.querySelector("#fromBox select");
+let toBox = document.querySelector("#toBox select");
 
 // adding all country options to the dropdown
 dropDown.forEach(optionText => {
@@ -48,24 +50,35 @@ function getFromCurrency() {
         return evt.target.value;
     });   
 }
+function getToCurrency() {
+    toBox.addEventListener("change", (evt)=> {
+        toCurrency = evt.target.value;
+        return evt.target.value;
+    });   
+}
 getFromCurrency();
+getToCurrency();
 
 button.addEventListener("click", async (event) => {
     event.preventDefault();
     console.log(event);
 
     // getting the amount
-    let amount = document.querySelector("input");
-    if (amount.value === "" || amount.value < 1) amount.value = 1;
+    let amountInput = document.querySelector("input");
+    if (amountInput.value === "" || amountInput.value < 1) amountInput.value = 1;
+    let amount = amountInput.value;
 
     //getting currency exchange rate
     let URL = `${baseUrl}/${fromCurrency}`;
     let promise = await fetch(URL);
     let data = await promise.json();
-    console.log(data.rates["AED"]);
-    
-    console.log(URL);
+    let exchangerate = data.rates[`${toCurrency}`];
+    // mathematical calculations
+    let amountOutput = exchangerate * amount;
 
+    console.log(amountOutput);
+    let outputDisplay = document.querySelector("#outputAmount");
+    outputDisplay.innerText = amountOutput + " "+ toCurrency;
 
 
 });
