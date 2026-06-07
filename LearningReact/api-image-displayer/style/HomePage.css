@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.form-all {
+    margin-top: 10rem;
+}
+.input-box {
+    
+    display: flex;
+    margin: 3rem;
+    /* background: red; */
+}
+
+.lable-input {
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+.input-text-box {
+    width: 20rem;
+    height: 3rem;
+    /* background-color: lime; */
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+}
+.Submit-button {
+    /* width: 5rem; */
+    width: 10rem;
+    height: 3rem;
+    /* background: lime; */
+    border: 2px solid brown;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+}
+#img-submit-button {
+    margin-left: 6.5rem;
+}
+#vid-submit-button {
+    margin-left: 1.5rem;
+}
+
+.size-select-menue{
+    background: yellow;
+    width: 5rem;
+    font-size: 0.9rem;
+}

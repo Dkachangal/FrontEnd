@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react"; 
 import DropDownMenue from '../components/DropDownMenue';
-
+import '../style/HomePage.css';
 
 function InputObjectForm() {
     const navigate = useNavigate();
@@ -28,23 +28,26 @@ function InputObjectForm() {
 
     return (
         <>
-            <form onSubmit={onSubmit}>
-                <div className="image-input-box">
+            <div className="form-all">
+                <form onSubmit={onSubmit}>
+                <div className="input-box">
                     <label className="lable-input">Get Image</label>
-                    <input type="text" className="Input-Box" value = {name} onChange={(e) => storeUserObj(e.target.value)}/>
+                    <input type="text" className="input-text-box" value = {name} onChange={(e) => storeUserObj(e.target.value)}/>
                     <p></p>
-                    <button type="submit" className="Submit-button">Get Image</button>
+                    <button type="submit" className="Submit-button" id="img-submit-button">Get Image</button>
                 </div>
-            </form>
+                </form>
+        
+                <form onSubmit={submitVideo}>
+                    <div className="input-box">
+                        <label className="lable-input">Get Video</label>
+                        <input type="text" className="input-text-box" value = {videoTitle} onChange={(e) => changingVideoTitle(e.target.value)} placeholder="Search Video"/>
+                        <DropDownMenue onSizeChange={setChoosenSize}/>
+                        <button type="submit" className="Submit-button" id="vid-submit-button">Get Video</button>
+                    </div>
+                </form>
+            </div>
 
-            <form onSubmit={submitVideo}>
-                <div className="video-input-box">
-                    <label className="lable-input">Get Video</label>
-                    <input type="text" className="Input-Box" value = {videoTitle} onChange={(e) => changingVideoTitle(e.target.value)} placeholder="Search Video"/>
-                    <button type="submit" className="Submit-button">Get Video</button>
-                    <DropDownMenue onSizeChange={setChoosenSize}/>
-                </div>
-            </form>
         </>
     )
 }

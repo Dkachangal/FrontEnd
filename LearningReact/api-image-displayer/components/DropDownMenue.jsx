@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import '../style/HomePage.css'
 
 function DropDownMenue({onSizeChange}) {
     const [videoSize, setVideoSize] = useState('medium');
@@ -15,7 +16,7 @@ function DropDownMenue({onSizeChange}) {
     
     return (
         <>
-            <select id="option" value = {videoSize} onChange={handleChange}>
+            <select id="option" value = {videoSize} onChange={handleChange} className="size-select-menue">
                 <option value = "disabled">--Select video Size--</option>
                 <option value="small">Small</option>
                 <option value="medium">Medium</option>
