@@ -1,12 +1,13 @@
 import {Routes, Route, Link} from 'react-router-dom';
 import DisplayImage from '../components/DisplayImage';
+import styles from '../style/DisplayImageStyle.module.css';
 
 
 function ImagePage() {
     return (
         <div>
             <h1>Image</h1>
-            <div className='Image-box'>
+            <div className={styles.pageBackground}>
                 <DisplayImage />
                 Square
             </div>

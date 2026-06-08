@@ -17,6 +17,7 @@ function DisplayVideo() {
                 updatingVidUrl(result);
             }
         }
+        // console.log(videoSize);
         fetchVideo();
     }, [objectName, videoSize])
 

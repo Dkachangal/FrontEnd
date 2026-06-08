@@ -1,6 +1,7 @@
 import getData from "../services/GetImage";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import '../style/DisplayImageStyle.module.css';
 
 function DisplayImage() {
     const location = useLocation();
@@ -21,7 +22,7 @@ function DisplayImage() {
     }, [objectName])
 
     return (
-        <div>
+        <div className="pageBackground">
             {webUrl ? (
                 <div>
                     <img src={webUrl} />
